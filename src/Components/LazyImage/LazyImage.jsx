@@ -1,0 +1,50 @@
+import React, { useState, useEffect } from 'react'
+
+const placeHoleder = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII="
+
+const LazyImage = ({ src, alt, className }) => {
+
+    const [imageSrc, setImageSrc] = useState(null)
+    const [imageRef, setImageRef] = useState()
+
+    useEffect(() => {
+        let observer
+        let didCancel = false
+
+        if (imageRef && imageSrc === placeHoleder) {
+            if (IntersectionObserver) {
+                observer = new IntersectionObserver(
+                    entries => {
+                        entries.forEach(entry => {
+                            if (!didCancel && (entry.intersectionRatio > 0 || entry.isIntersecting)) {
+                                setImageSrc(src)
+                            }
+                        })
+                    },
+                    {
+                        threshold: 0.01,
+                        rootMargin: '75%'
+                    }
+                )
+                observer.observe(imageRef)
+            } else {
+                setImageSrc(src)
+            }
+        }
+
+        return () => {
+            didCancel = true
+            if (observer && observer.unobserve) {
+                observer.unobserve(imageRef)
+            }
+        }
+
+    }, [imageRef, imageSrc, src])
+
+    return (
+        <img src={src} ref={setImageRef}  alt={alt} className={className} />
+    )
+
+}
+
+export default LazyImage
