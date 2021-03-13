@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom'
 
 // Components
 import TextSliding from '../../Components/TextSliding/TextSliding'
+import LazyImg from '../../Components/LazyImage/LazyImage'
+
+// Assets
+import logo from '../../assets/logo.svg'
 
 // Styles
 import styles from './Home.module.css'
@@ -11,6 +15,10 @@ export default class Home extends React.Component {
 
     state = {
         contentSliding: []
+    }
+
+    componentDidMount() {
+        this.fillContent();
     }
 
     fillContent() {
@@ -34,8 +42,13 @@ export default class Home extends React.Component {
 
             <div className={styles.container_home}>
                 <div>
+                    <LazyImg 
+                        src={logo}
+                        alt="Logo"
+                        className={styles.img_logo}
+                    />
                     <div className={styles.brand}>
-                        <h3>Santiago Ruiz</h3>
+                        <h1>Santiago Ruiz</h1>
                     </div>
                     <div className={styles.sliding_container}>
                         <TextSliding

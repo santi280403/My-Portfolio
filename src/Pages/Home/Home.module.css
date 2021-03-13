@@ -1,13 +1,50 @@
 .container_home {
     width: 100%;
-    height: 100%;
-    background: #D3CCE3;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #E9E4F0, #D3CCE3);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100vh;
+    background: linear-gradient(to right, #ffefba, #ffffff);
+    background-size: 400% 400%;
     animation: gradient 5s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_home .img_logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.container_home .brand {
+    text-align: center;
+}
+
+.container_home .brand h1 {
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.container_home .links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.container_home .links a {
+    background: transparent;
+    border: 1px solid lightcoral;
+    color: #111;
+    font-size: 20px;
+    padding: 5px 10px;
+    margin: 0 5px;
+    transition: all .5s ease;
+}
+
+.container_home .links a:hover {
+    background: lightcoral;
+    color: #fff;
 }
 
 @keyframes gradient {

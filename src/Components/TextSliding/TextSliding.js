@@ -3,21 +3,21 @@ import React from 'react'
 // Styles
 import styles from './TextSliding.module.css'
 
-const TextSliding = ({ text, contentSlider }) => {
+const TextSliding = ({ text }) => {
 
     return(
         <div className={styles.wrapper}>
             {text}
             <div className={styles.slider}>
-                {
-                    contentSlider.map((content, i) => {
-                        return(
-                            <div>
-                                {content.text}
-                            </div>
-                        )
-                    })
-                }
+                <div className={styles.slider_text_1}>
+                    Node js
+                </div>
+                <div className={styles.slider_text_2}>
+                    Python
+                </div>
+                <div className={styles.slider_text_3}>
+                    Golang
+                </div>
             </div>
         </div>
     )
