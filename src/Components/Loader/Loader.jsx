@@ -17,10 +17,23 @@ const LoadingPage = () => {
     )
 }
 
+const Spinner = () => {
+    return(
+        <div className={styles.spinner}>
+            <div></div>
+            <div></div>
+        </div>
+    )
+}
+
 const Loader = ({ type }) => {
 
     if (type === 'page') {
         return <LoadingPage />
+    }
+
+    if (type === 'spinner') {
+        return <Spinner />
     }
 
     return <></>

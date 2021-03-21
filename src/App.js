@@ -10,6 +10,7 @@ import './App.css'
 
 // Pages
 const Home = lazy(() => import('./Pages/Home/Home'))
+const About = lazy(() => import('./Pages/About me/About'))
 
 export default class App extends React.Component {
 
@@ -21,6 +22,7 @@ export default class App extends React.Component {
                         <NavBar />
                         <Switch>
                             <Route exact path="/" component={Home} />
+                            <Route exact path="/about_me" component={About} />
                         </Switch>
                     </Suspense>
                 </Router>

@@ -39,19 +39,48 @@ const NavBar = () => {
                 <nav className={styles.nav}>
                     <ul>
                         <li>
-                            <Link to="/" data-text="Home">Home</Link>
+                            <Link 
+                                to="/" 
+                                data-text="Home"
+                                onClick={onClick}
+                            >
+                                Home
+                            </Link>
                         </li>
                         <li>
-                            <Link to="/about_me" data-text="Sobre mi">Sobre mi</Link>
+                            <Link 
+                                to="/about_me" 
+                                data-text="Sobre mi"
+                                onClick={onClick}
+                            >
+                                Sobre mi
+                            </Link>
                         </li>
                         <li>
-                            <Link to="/portfolio" data-text="Portafolio">Portafolio</Link>
+                            <Link 
+                                to="/portfolio" 
+                                onClick={onClick}
+                                data-text="Portafolio"
+                            >
+                                Portafolio
+                            </Link>
                         </li>
                         <li>
-                            <Link to="/blog" data-text="Blog">Blog</Link>
+                            <Link 
+                                to="/blog" 
+                                data-text="Blog"
+                            >
+                                Blog
+                            </Link>
                         </li>
                         <li>
-                            <Link to="/contact_me" data-text="Contacto">Contacto</Link>
+                            <Link 
+                                to="/contact" 
+                                data-text="Contacto"
+                                onClick={onClick}
+                            >
+                                Contacto
+                            </Link>
                         </li>
                     </ul>
                 </nav>

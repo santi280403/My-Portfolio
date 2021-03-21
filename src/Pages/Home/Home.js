@@ -57,10 +57,10 @@ export default class Home extends React.Component {
                         />
                     </div>
                     <div className={styles.links}>
-                        <Link to="">Sobre mi</Link>
-                        <Link to="">Portafolio</Link>
-                        <Link to="">Blog</Link>
-                        <Link to="">Contacto</Link>
+                        <Link to="/about_me">Sobre mi</Link>
+                        <Link to="/portfolio">Portafolio</Link>
+                        <Link to="/blog">Blog</Link>
+                        <Link to="/conctact">Contacto</Link>
                     </div>
                 </div>
             </div>
