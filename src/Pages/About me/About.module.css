@@ -117,15 +117,9 @@
 .my_skills {
     width: 100%;
     margin-top: 20px;
-    text-align: center;
 }
 
 .my_skills h2 {
     font-weight: 500;
-}
-
-.my_skills .content_skills {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 }

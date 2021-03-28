@@ -1,0 +1,18 @@
+[
+    {
+        "framework": "React JS",
+        "percent": 60
+    },
+    {
+        "framework": "Angular",
+        "percent": 50
+    },
+    {
+        "framework": "Node JS",
+        "percent": 75
+    },
+    {
+        "framework": "Electron",
+        "percent": 40
+    }
+]

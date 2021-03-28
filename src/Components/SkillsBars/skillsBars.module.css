@@ -1,0 +1,66 @@
+/* .content_skills {
+    width: 100%;
+    display: block;
+}
+
+.content_skills div {
+    width: 100%;
+    height: 40px;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.content_skills div h2 {
+    color: #111;
+    text-align: center;
+}
+
+.content_skills div h3 {
+    color: #111;
+    font-weight: 300;
+}
+
+.content_skills div .container_bar {
+    border-radius: 20px;
+    background-color: #ccc;
+}
+
+.content_skills div .container_bar .percent_bar {
+    background: crimson;
+} */
+
+.content_skills {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.content_skills div {
+    width: 90%;
+    display: block;
+}
+
+.content_skills div .content_bar {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content_skills div .container_bar {
+    margin: 15px;
+    padding: 0px;
+    border-radius: 20px;
+    background-color: #ccc;
+}
+
+.content_skills div .container_bar .percent_bar {
+    background: #457b9d;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 20px;
+}

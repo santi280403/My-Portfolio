@@ -1,18 +1,21 @@
 import React, { Fragment } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook, faTwitter, faGithub, faGooglePlus, faReact, faNodeJs, faJava, faAngular } from '@fortawesome/free-brands-svg-icons'
+import { faFacebook, faTwitter, faGithub, faGooglePlus } from '@fortawesome/free-brands-svg-icons'
 
 
 // Components
 import LazyImg from '../../Components/LazyImage/LazyImage'
 import Card from '../../Components/Card/Card'
 import Loader from '../../Components/Loader/Loader'
+import SkillsBars from '../../Components/SkillsBars/skillsBars'
 
 // Assets
 import music from '../../assets/guitarra.jpg'
 import art from '../../assets/arte.jpg'
 import reading from '../../assets/lectura.jpg'
 import learn from '../../assets/learn.jpg'
+import languages from '../../assets/languages.json'
+import frameworksJSON from '../../assets/frameworks.json'
 
 // Styles
 import styles from './About.module.css'
@@ -62,67 +65,9 @@ export default class AboutMe extends React.Component {
             }
         ]
 
-        skills = [
-            {
-                language: "Html",
-                percent: 75
-            },
-            {
-                language: "Css",
-                percent: 70
-            },
-            {
-                language: "Javascript",
-                percent: 75
-            },
-            {
-                language: "Typescript",
-                percent: 65
-            },
-            {
-                language: "Python",
-                percent: 40
-            },
-            {
-                language: "Golang",
-                percent: 30
-            },
-            {
-                language: "Java",
-                percent: 40,
-                icon: <FontAwesomeIcon icon={faJava} />
-            },
-            {
-                language: "Mysql",
-                percent: 60
-            },
-            {
-                language: "MongoDB",
-                percent: 50
-            }
-        ]
+        skills = languages
 
-        frameworks = [
-            {
-                framework: "React JS",
-                percent: 50,
-                icon: <FontAwesomeIcon icon={faReact} />
-            },
-            {
-                framework: "Angular",
-                percent: 50,
-                icon: <FontAwesomeIcon icon={faAngular} />
-            },
-            {
-                framework: "Node JS",
-                percent: 75,
-                icon: <FontAwesomeIcon icon={faNodeJs} />
-            },
-            {
-                framework: "Electron",
-                percent: 40
-            }
-        ]
+        frameworks = frameworksJSON
 
         this.setState({
             imgs,
@@ -133,7 +78,7 @@ export default class AboutMe extends React.Component {
     }
 
     render() {
-        const { imgs, loading } = this.state
+        const { imgs, loading, skills, frameworks } = this.state
         return (
             <div className={styles.container_about}>
                 <div className={styles.content}>
@@ -150,7 +95,7 @@ export default class AboutMe extends React.Component {
                                 <h2>Santiago Alejandro Ruiz Rojas</h2>
                                 <h3>Desarrollador</h3>
                                 <h3>Chia, Cundinamarca</h3>
-                                <h4>santiago.aruiz@gmail.com</h4>
+                                <h4>santiago.aruiz28@gmail.com</h4>
                             </div>
                             <div className={styles.icons}>
                                 <ul>
@@ -196,42 +141,49 @@ export default class AboutMe extends React.Component {
                                 <Loader type="spinner" />
                             </div>
                         ) : (
-                                <Fragment>
-                                    <div className={styles.about_me}>
-                                        <h2>¿Quien soy?</h2>
-                                        <div className={styles.content_cards}>
+                            <Fragment>
+                                <div className={styles.about_me}>
+                                    <h2>¿Quien soy?</h2>
+                                    <div className={styles.content_cards}>
 
-                                            <Card
-                                                img={imgs[0]}
-                                                title="Musica"
-                                                text="Me gusta la musica y disfruto tocar la guitarra"
-                                            />
-                                            <Card
-                                                img={imgs[1]}
-                                                title="Arte"
-                                                text="Me gusta el arte y disfruto dibujar"
-                                            />
-                                            <Card
-                                                img={imgs[2]}
-                                                title="Lectura"
-                                                text="Me gusta leer libros de fantasia y libros que me enseñen cosas nuevas"
-                                            />
-                                            <Card
-                                                img={imgs[3]}
-                                                title="Autodidacta"
-                                                text="Me gusta aprender cosas nuevas por mi cuenta"
-                                            />
+                                        <Card
+                                            img={imgs[0]}
+                                            title="Musica"
+                                            text="Me gusta la musica y disfruto tocar la guitarra"
+                                        />
+                                        <Card
+                                            img={imgs[1]}
+                                            title="Arte"
+                                            text="Me gusta el arte y disfruto dibujar"
+                                        />
+                                        <Card
+                                            img={imgs[2]}
+                                            title="Lectura"
+                                            text="Me gusta leer libros de fantasia y libros que me enseñen cosas nuevas"
+                                        />
+                                        <Card
+                                            img={imgs[3]}
+                                            title="Autodidacta"
+                                            text="Me gusta aprender cosas nuevas por mi cuenta"
+                                        />
 
-                                        </div>
                                     </div>
-                                    <div className={styles.my_skills}>
-                                        <h2>Mis habilidades</h2>
-                                        <div className={styles.content_skills}>
-                                            
-                                        </div>
+                                </div>
+                                <div className={styles.my_skills}>
+                                    <h2>Mis habilidades</h2>
+                                    <div className={styles.content_skills}>
+                                        <SkillsBars 
+                                            typeSkill="language"
+                                            languages={skills}
+                                        />
+                                        <SkillsBars 
+                                            typeSkill="framework"
+                                            frameworks={frameworks}
+                                        />
                                     </div>
-                                </Fragment>
-                            )
+                                </div>
+                            </Fragment>
+                        )
                     }
                 </div>
             </div>

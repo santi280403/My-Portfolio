@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Calendar App",
+        "desc": "Esta es una aplicacion secilla, la cual consiste en registrarse y loguearse, configurar tu perfil y crear, obtener, actualizar o borrar un recordatorio, evento y/o fechas especiales en un calendario.",
+        "link": "https://github.com/santi280403/calendar-app",
+        "back": "#f1faee",
+        "color": "#000"
+    },
+    {
+        "name": "Cloud Up",
+        "desc": "Esta es una aplicacion que consiste en almacenar fotos, videos y/o archivos en la nube",
+        "link": "https://github.com/santi280403/Cloud-Up",
+        "back": "#a8dadc",
+        "color": "#fff"
+    },
+    {
+        "name": "WeatherApp",
+        "desc": "Esta aplicacion consiste en obtener tu geolocalizacion y de acuerdo a esa informacion te muestra los datos del clima de tu ciudad",
+        "link": "https://github.com/santi280403/WeatherApp",
+        "back": "#83c5be",
+        "color": "#fff"
+    }
+]

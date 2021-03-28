@@ -11,6 +11,7 @@ import './App.css'
 // Pages
 const Home = lazy(() => import('./Pages/Home/Home'))
 const About = lazy(() => import('./Pages/About me/About'))
+const Portfolio = lazy(() => import('./Pages/Portfolio/Portfolio'))
 
 export default class App extends React.Component {
 
@@ -23,6 +24,7 @@ export default class App extends React.Component {
                         <Switch>
                             <Route exact path="/" component={Home} />
                             <Route exact path="/about_me" component={About} />
+                            <Route exact path="/portfolio" component={Portfolio} />
                         </Switch>
                     </Suspense>
                 </Router>

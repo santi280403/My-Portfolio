@@ -1,0 +1,38 @@
+[
+    {
+        "language": "Html",
+        "percent": 75
+    },
+    {
+        "language": "Css",
+        "percent": 70
+    },
+    {
+        "language": "Javascript",
+        "percent": 75
+    },
+    {
+        "language": "Typescript",
+        "percent": 65
+    },
+    {
+        "language": "Python",
+        "percent": 40
+    },
+    {
+        "language": "Golang",
+        "percent": 30
+    },
+    {
+        "language": "Java",
+        "percent": 40
+    },
+    {
+        "language": "Mysql",
+        "percent": 60
+    },
+    {
+        "language": "MongoDB",
+        "percent": 50
+    }
+]
